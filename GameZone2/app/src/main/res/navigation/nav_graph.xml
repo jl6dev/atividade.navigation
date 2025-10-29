@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/gamesFragment">
+
+    <fragment
+        android:id="@+id/gamesFragment"
+        android:name="com.example.gamezone2.GamesFragment.GamesFragment"
+        android:label="Jogos" >
+        <action
+            android:id="@+id/action_gamesFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.gamezone2.GamesFragment.ProfileFragment"
+        android:label="Perfil" >
+        <argument
+            android:name="playerName"
+            app:argType="string"
+            android:defaultValue="Convidado" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.gamezone2.GamesFragment.SettingsFragments"
+        android:label="Configurações" />
+</navigation>
